@@ -1,0 +1,43 @@
+Anthony Messana
+2/7/2022
+Assignment 2
+
+
+Problems Identified and Changes Made:
+
+1. The name of the Pet attribute 'n' was nondescriptive. Based off its usage
+it appeared to be the pets name, so I renamed that attribute to name
+
+2. The sit method was too specific to be in the Pet parent class, and it 
+there can be many cases where inheriting the sit function makes no sense,
+like with the Fish in this case.
+
+3. The take_to_vet function used a vet var only in the scope of the method.
+It makes more sense to make vet an attribute, so that this function doesn't
+need to be re-defined for every Pet sub-class, and now the vetinarian can be 
+easily changed in the future by changing the parent Pet class vet attribute. 
+
+
+class Pet:
+    def __init__(self, breed, size, environment, name, vet):
+        self.breed = breed
+        self.size = size
+        self.environment = environment
+        self.name = name
+	self.vet = vet
+
+    def eat(self):
+        print(f'Pet {self.name} eats')
+
+    def sleep(self):
+        print(f'Pet {self.name} sleeps')
+    
+    def take_to_vet(self)"
+        print(f'Take {self.name} to {self.vet})
+
+class Fish(Pet):
+    def eat(self):
+        print('Fish eats')
+
+    def sleep(self): # assume fish can sleep
+        print(f'Fish {self.n} sleeps')
