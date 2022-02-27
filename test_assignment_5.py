@@ -40,7 +40,7 @@ class TestSendSMSService(unittest.TestCase):
         mTwilioApi = MagicMock(autospec=TwilioAPI)
         SMSService = SendSMSService(mTwilioApi)
         SMSService.complete(mResponse)
-        mTwilioApi.get_status.assert_called_once_with(mResponse)
+        mTwilioApi.get_message_status.assert_called_once_with(mResponse)
 
 class TestTwilioAPI(unittest.TestCase):
     @patch.object(Client, "messages", autospec=True)
