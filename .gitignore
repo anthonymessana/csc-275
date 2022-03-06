@@ -1,0 +1,10 @@
+student_exams/
+*.asc
+*.key
+venv/
+.env
+.pyc
+__pycache__/
+.coverage
+/virtualEnv
+
