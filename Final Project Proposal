@@ -1,0 +1,9 @@
+Final Project Proposal:
+
+For my final I would like to make an application similar to food delivery services such as DoorDash and UberEats.  
+1. For following best practices, I would refer back to the SOLID principles we learned about in the beginning of the semester.
+2. To fufill the minimum of four classes, there can be a Customer class, an Order class, an OrderHandler class, and a Restaurant class. As I go into
+    implementation, im sure I will also discover a few more classes that I may need to make the code base feasible.
+3. For integration testing, the Customer, Order and OrderHandler class will likely all need to interact with eachother in some meaningful way.
+4. For parameterized testing, if an order or a customer meets certain parameters, they may qualify for a discount on their order. Here, it can be possible to 
+   test ranges of values, as well as boundary values and edge cases.
