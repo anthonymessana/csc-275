@@ -20,4 +20,4 @@ jobs:
       # Run our unit tests
       - name: Run unit tests
         run: |
-          python -m unittest discover -s final
+          python -m unittest discover -s final/test
